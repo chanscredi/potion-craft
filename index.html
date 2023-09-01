@@ -33,6 +33,13 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
+	  
+		window.addEventListener('resize', function(event) 
+		{
+			var canvas = document.getElementById('unity-canvas');
+			canvas.setAttribute('width', window.innerWidth);
+			canvas.setAttribute('height', window.innerHeight);
+		}, true);
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
